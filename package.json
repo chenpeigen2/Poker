@@ -1,0 +1,24 @@
+{
+  "name": "poker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @poker/web dev",
+    "build": "pnpm --filter @poker/web build",
+    "preview": "pnpm --filter @poker/web preview",
+    "typecheck": "pnpm --filter @poker/domain --filter @poker/engine --filter @poker/ai --filter @poker/web run typecheck && tsc --noEmit -p tsconfig.tests.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint packages apps",
+    "check:no-any": "node scripts/check-no-any.mjs",
+    "verify": "pnpm check:no-any && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "oxlint": "^1.24.0",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

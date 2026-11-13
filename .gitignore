@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out/
+coverage/
+*.local
+.DS_Store
+.vite/
+*.log
+.playwright/
+test-results/
+.smoke-*.png
+.v2-*.png
+.*-check.cjs
